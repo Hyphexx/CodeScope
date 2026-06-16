@@ -12,6 +12,7 @@ const localOrigins = [
   "http://127.0.0.1:5173",
   "http://localhost:5174",
   "http://127.0.0.1:5174",
+  "https://code-scope-ai.vercel.app",
   "https://code-scope-pi.vercel.app"
 ];
 
