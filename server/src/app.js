@@ -11,7 +11,8 @@ const localOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:5173",
   "http://localhost:5174",
-  "http://127.0.0.1:5174"
+  "http://127.0.0.1:5174",
+  "https://code-scope-pi.vercel.app"
 ];
 
 function normalizeOrigin(origin = "") {
@@ -22,7 +23,7 @@ const configuredOrigins = (process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIG
   .split(",")
   .map(normalizeOrigin)
   .filter(Boolean);
-const allowedOrigins = new Set([...localOrigins, ...configuredOrigins]);
+const allowedOrigins = new Set([...localOrigins.map(normalizeOrigin), ...configuredOrigins]);
 
 app.use(
   cors({
