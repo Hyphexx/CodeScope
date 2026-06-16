@@ -86,7 +86,7 @@ button:disabled {
 
 .brand-wordmark {
   color: #f0c55a;
-  font-size: 1.08rem;
+  font-size: 1.28rem;
   font-weight: 950;
 }
 
@@ -514,7 +514,7 @@ button:disabled {
 
 .auth-shell {
   align-items: center;
-  background: linear-gradient(135deg, #17202a 0%, #293529 48%, #f4f6f2 48%);
+  background: linear-gradient(135deg, #17202a 0%, #293529 100%);
   display: flex;
   padding: clamp(18px, 5vw, 64px);
 }
@@ -528,19 +528,27 @@ button:disabled {
 
 .auth-copy {
   color: #ffffff;
+  max-width: 720px;
+  padding-right: clamp(18px, 5vw, 64px);
+}
+
+.auth-copy .brand-wordmark {
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 1;
 }
 
 .auth-copy h1 {
   font-size: clamp(2.6rem, 6vw, 5.1rem);
   letter-spacing: 0;
   line-height: 0.98;
-  margin: 72px 0 0;
+  margin: 52px 0 0;
   max-width: 720px;
 }
 
 .auth-copy p {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.08rem;
+  max-width: 560px;
 }
 
 .auth-card {
