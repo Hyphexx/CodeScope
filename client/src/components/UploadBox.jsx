@@ -43,7 +43,7 @@ export default function UploadBox({ files, onFilesChange, onSubmit, isLoading })
       >
         <h2>Upload code files</h2>
         <p>
-          Pick one or more text/code files. The scan keeps the write-up concise:
+          Pick one or more text/code files. The scan keeps the write up concise:
           overview, purpose, issues, security, quality notes, and ELI5.
         </p>
 

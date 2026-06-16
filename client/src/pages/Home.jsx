@@ -102,7 +102,7 @@ export default function Home({ token, user, onLogout }) {
           <p className="eyebrow">Saved code scans</p>
           <h1>CodeScope</h1>
           <p className="hero-copy">
-            File uploads, plain-English review notes, and history you can clean up.
+            File uploads, plain English review notes, and history you can clean up.
           </p>
         </div>
       </section>

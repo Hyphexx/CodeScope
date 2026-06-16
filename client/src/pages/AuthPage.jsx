@@ -35,7 +35,7 @@ export default function AuthPage({ onAuth }) {
           </div>
           <h1>Code review notes that stay readable.</h1>
           <p>
-            Upload files, get a practical dev-friendly scan, and keep previous
+            Upload files, get a practical developer friendly scan, and keep previous
             analyses tied to your account.
           </p>
         </div>
