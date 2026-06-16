@@ -1,6 +1,7 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
+import { getDbStatus } from "./config/db.js";
 import analysisRoutes from "./routes/analysisRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 
@@ -45,7 +46,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
+  res.json({
+    status: "ok",
+    mongo: getDbStatus()
+  });
 });
 
 app.use("/api/auth", authRoutes);
