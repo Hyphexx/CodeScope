@@ -1,0 +1,101 @@
+export const extensionLanguageMap = {
+  ".js": "JavaScript",
+  ".jsx": "JavaScript",
+  ".mjs": "JavaScript",
+  ".cjs": "JavaScript",
+  ".ts": "TypeScript",
+  ".tsx": "TypeScript",
+  ".html": "HTML",
+  ".css": "CSS",
+  ".scss": "SCSS",
+  ".sass": "Sass",
+  ".json": "JSON",
+  ".md": "Markdown",
+  ".py": "Python",
+  ".java": "Java",
+  ".c": "C",
+  ".h": "C/C++ Header",
+  ".cpp": "C++",
+  ".hpp": "C++ Header",
+  ".cs": "C#",
+  ".php": "PHP",
+  ".rb": "Ruby",
+  ".go": "Go",
+  ".rs": "Rust",
+  ".swift": "Swift",
+  ".kt": "Kotlin",
+  ".kts": "Kotlin",
+  ".sql": "SQL",
+  ".sh": "Shell",
+  ".bash": "Shell",
+  ".zsh": "Shell",
+  ".yml": "YAML",
+  ".yaml": "YAML",
+  ".xml": "XML",
+  ".vue": "Vue",
+  ".svelte": "Svelte",
+  ".env.example": "Environment Example"
+};
+
+export const textFileExtensions = new Set([
+  ...Object.keys(extensionLanguageMap),
+  ".txt",
+  ".gitignore",
+  ".npmrc",
+  ".babelrc",
+  ".eslintrc",
+  ".prettierrc"
+]);
+
+export const ignoredFolderNames = new Set([
+  "node_modules",
+  ".git",
+  "dist",
+  "build",
+  "coverage",
+  ".next",
+  ".vite",
+  ".cache"
+]);
+
+export const ignoredFileNames = new Set([
+  ".env",
+  ".env.local",
+  ".env.development",
+  ".env.production",
+  "package-lock.json",
+  "yarn.lock",
+  "pnpm-lock.yaml",
+  "bun.lockb"
+]);
+
+export const binaryExtensions = new Set([
+  ".png",
+  ".jpg",
+  ".jpeg",
+  ".gif",
+  ".webp",
+  ".svg",
+  ".ico",
+  ".bmp",
+  ".mp4",
+  ".mov",
+  ".avi",
+  ".mp3",
+  ".wav",
+  ".ogg",
+  ".pdf",
+  ".zip",
+  ".gz",
+  ".tar",
+  ".rar",
+  ".7z",
+  ".exe",
+  ".dll",
+  ".so",
+  ".dylib",
+  ".ttf",
+  ".otf",
+  ".woff",
+  ".woff2"
+]);

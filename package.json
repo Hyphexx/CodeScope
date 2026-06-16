@@ -1,0 +1,12 @@
+{
+  "name": "syntanalyze-codescope",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Junior-level MERN project for analyzing uploaded codebases.",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "start:server": "npm run start --prefix server",
+    "build:client": "npm run build --prefix client"
+  }
+}
