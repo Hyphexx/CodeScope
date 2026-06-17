@@ -105,14 +105,6 @@ All analysis routes require an `Authorization: Bearer <token>` header.
 - Lock files, `.env` files, `node_modules`, `.git`, `dist`, `build`, and similar noise are skipped.
 - The server sends a limited amount of text to Gemini so large files do not overload the request.
 
-## How To Explain This In An Interview
-
-CodeScope separates responsibilities cleanly without being overbuilt. The frontend handles account forms, file selection, showing results, and history actions. The backend owns anything sensitive: password hashing, token signing, upload parsing, file scanning, database writes, and the Gemini API call. Saved analyses are attached to `userId`, so one user cannot load or delete another user's scans.
-
-The most important security idea is that passwords are never stored as plain text. `authService.js` creates a PBKDF2 hash with a random salt. During login, the server hashes the submitted password the same way and compares it safely. After login, the server creates a signed token. The token proves who the user is on later requests, and protected routes use `requireAuth` before touching scan history.
-
-The most important data flow idea is that the uploaded files never go directly to Gemini from the browser. The browser sends files to Express. Express filters them, reads only supported text/code files, calculates stats, then sends a controlled snapshot to Gemini. The frontend only receives the final structured analysis.
-
 ## File Map
 
 ```txt
